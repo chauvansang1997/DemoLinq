@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLinq", "DemoLinqToXml\DemoLinq.csproj", "{1D91EB3B-5ED5-4C94-AA45-8D4F8FA89D2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLinq", "DemoLinq\DemoLinq.csproj", "{1D91EB3B-5ED5-4C94-AA45-8D4F8FA89D2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
