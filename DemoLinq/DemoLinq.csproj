@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="KhachHang.xml" />
+    <Content Include="HoaDon.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

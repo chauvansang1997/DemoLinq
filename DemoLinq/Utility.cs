@@ -27,7 +27,7 @@ namespace DemoLinq
             return xml;
         }
 
-        public static string WriteObjectToXml<T>(T target, string path = @"..\..\KhachHang.xml")
+        public static string WriteObjectToXml<T>(T target, string path )
         {
             XmlSerializer xsSubmit = new XmlSerializer(typeof(T));
             //if(path == null)
