@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbKaoraoke">
+  <DataContextMoniker Name="/dbKaoraokeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fad3e9a3-8240-47ce-bf51-67eb3f4dd416" absoluteBounds="2, 2.125, 2, 3.1170068359375">
+      <DataClassMoniker Name="/dbKaoraokeDataContext/HOADON" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a1f3f5f-fb9c-43be-9749-faa897fa7655" absoluteBounds="2.015, 2.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a6d1fc2-2652-42fe-9fb5-1a599046c63a" absoluteBounds="5, 1.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbKaoraokeDataContext/KHACHHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1cb467b-e588-4dc1-ae14-13ef57fa8d37" absoluteBounds="5.015, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5 : 3.07619466145833); (4 : 3.07619466145833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbKaoraokeDataContext/KHACHHANG/KHACHHANG_HOADON" />
+      <nodes>
+        <classShapeMoniker Id="0a6d1fc2-2652-42fe-9fb5-1a599046c63a" />
+        <classShapeMoniker Id="fad3e9a3-8240-47ce-bf51-67eb3f4dd416" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="96a99086-fb2c-4219-b7e4-e47abe401f8e" absoluteBounds="3, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbKaoraokeDataContext/LOAIKHACHHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5824898-2ab5-47e0-baf4-e18ee1489ecc" absoluteBounds="3.015, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5 : 1.19314697265625); (6.0000005 : 1.19314697265625); (6.0000005 : 1.875)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbKaoraokeDataContext/LOAIKHACHHANG/LOAIKHACHHANG_KHACHHANG" />
+      <nodes>
+        <classShapeMoniker Id="96a99086-fb2c-4219-b7e4-e47abe401f8e" />
+        <classShapeMoniker Id="0a6d1fc2-2652-42fe-9fb5-1a599046c63a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

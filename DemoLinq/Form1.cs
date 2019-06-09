@@ -14,6 +14,7 @@ namespace DemoLinq
         public Form1()
         {
             InitializeComponent();
+            Utility.WriteObjectToXml<List<KhachHang>>(DAO.LayDanhSachKhachHang());
         }
     }
 }

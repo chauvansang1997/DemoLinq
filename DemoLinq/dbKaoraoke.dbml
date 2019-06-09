@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbQuanLyKaraoke" Class="dbKaoraokeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=127.0.0.1;Initial Catalog=dbQuanLyKaraoke;Integrated Security=True" SettingsObjectName="DemoLinq.Properties.Settings" SettingsPropertyName="dbQuanLyKaraokeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.HOADON" Member="HOADONs">
+    <Type Name="HOADON">
+      <Column Name="SOHD" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MANV" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="MAKH" Type="System.String" DbType="Char(7) NOT NULL" CanBeNull="false" />
+      <Column Name="MAPHONG" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="TIENDATCOC" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="GIOVAO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GIORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TRANGTHAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NGAYLAP" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="THANHTIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GIAMGIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIENGIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="KHACHHANG_HOADON" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
+    <Type Name="KHACHHANG">
+      <Column Name="MAKH" Type="System.String" DbType="Char(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MALOAIKH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TENKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Association Name="KHACHHANG_HOADON" Member="HOADONs" ThisKey="MAKH" OtherKey="MAKH" Type="HOADON" />
+      <Association Name="LOAIKHACHHANG_KHACHHANG" Member="LOAIKHACHHANG" ThisKey="MALOAIKH" OtherKey="MALOAIKH" Type="LOAIKHACHHANG" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAIKHACHHANG" Member="LOAIKHACHHANGs">
+    <Type Name="LOAIKHACHHANG">
+      <Column Name="MALOAIKH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENLOAIKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SOTIEMTICHLUY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LOAIKHACHHANG_KHACHHANG" Member="KHACHHANGs" ThisKey="MALOAIKH" OtherKey="MALOAIKH" Type="KHACHHANG" />
+    </Type>
+  </Table>
+</Database>
